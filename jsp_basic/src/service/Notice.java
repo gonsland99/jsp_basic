@@ -9,18 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/hi")
-public class Test extends HttpServlet{
+@WebServlet("/notice")
+public class Notice extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("utf-8");	//한글깨짐방지
-		response.setContentType("text/html; charset=utf-8");	//html형식, utf-8로 해석
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+//		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		String cnt_ = request.getParameter("cnt");	// cnt_는 임시변수
-		int cnt = 100;
-		if(cnt_ != null && !cnt_.equals(""))
-			cnt = Integer.parseInt(cnt_);
-		for(int i=0; i<cnt; i++)
-			out.println((i+1) + " : 안녕 Hello~~! <br>");
+		
+		String title = request.getParameter("title");	
+		String content = request.getParameter("content");	
+		
+		out.println(title);
+		out.println(content);
 	}
 }
