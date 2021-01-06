@@ -16,7 +16,7 @@ public class Notice extends HttpServlet{
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 //		request.setCharacterEncoding("utf-8");
-		PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter();	//내장객체 생성
 		
 		String title = request.getParameter("title");	
 		String content = request.getParameter("content");	
