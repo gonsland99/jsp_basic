@@ -69,7 +69,7 @@ public class NoticeDetailController extends HttpServlet{
 		}
 		//redirect	다른페이지로 보내버림
 		//forward	다른페이지 작업 이어서 진행
-		request.getRequestDispatcher("/notice/detail.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/notice/detail.jsp").forward(request, response);
 		
 	}
 }
