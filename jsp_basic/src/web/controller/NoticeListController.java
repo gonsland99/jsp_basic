@@ -1,13 +1,6 @@
 package web.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -17,51 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import web.entity.Notice;
+import web.service.NoticeService;
 
 @WebServlet("/notice/list")
 public class NoticeListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Notice> list = new ArrayList<>();
-		
-		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
-		String sql = "SELECT * FROM NOTICE";
-		
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection(url,"GON","a12345");
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(sql);
-			
-			while(rs.next()){
-				int id = rs.getInt("ID");
-				String title = rs.getString("TITLE");
-				Date regdate = rs.getDate("REGDATE");
-				String writerId = rs.getString("WRITER_ID");
-				int hit = rs.getInt("hit") ;
-				String files = rs.getString("FILES");
-				String content = rs.getString("CONTENT");
-				
-				Notice notice = new Notice(
-						id,
-						title,
-						regdate,
-						writerId,
-						hit,
-						files,
-						content
-					);
-				list.add(notice);
-			}
-
-			rs.close();
-			st.close();
-			con.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		//list?f=title&q=a
+		String field_ = request.getParameter("f");
+		String query_ = request.getParameter("q");
+		String field = "title";
+		if(field_ != null)
+			field = field_;
+		String query = "";
+		if(query_ != null)
+			query = query_;
+		NoticeService service = new NoticeService();
+		List<Notice> list = service.getNoticeList(field, query, 1);
 		
 		request.setAttribute("list", list);
 		request.getRequestDispatcher("/WEB-INF/view/notice/list.jsp").forward(request, response);
