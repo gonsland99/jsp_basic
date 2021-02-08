@@ -1,4 +1,4 @@
-package exam;
+package basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;

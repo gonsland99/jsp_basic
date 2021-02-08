@@ -5,7 +5,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="notice" method="post"><!-- post방식: queryString 내용을 도메인에 나타내지않음-->
+<!-- 요청방식
+	GET방식: 서버정보를 가져옴, 서버에 240Byte 전달가능, URL에 매개변수를 노출
+	POST방식: 서버정보를 올림, 데이터크기제한없음,  URL(도메인)에 매개변수(queryString내용)를 미표시
+	
+	매개변수: 함수, 메서드를 정의 할때 쓰는 변수
+ -->
+	<form action="content" method="post">
 		<div>
 			<label>제목: </label>
 			<input type="text" name="title"/>

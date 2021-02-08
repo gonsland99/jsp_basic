@@ -1,4 +1,4 @@
-package exam;
+package basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -42,6 +42,7 @@ public class Calc3 extends HttpServlet{
 			}
 		}
 		if(op != null && op.equals("=")) {
+		//스크립트 사용
 			ScriptEngine en = new ScriptEngineManager().getEngineByName("nashorn");
 			try {
 				exp = String.valueOf(en.eval(exp));
@@ -52,6 +53,7 @@ public class Calc3 extends HttpServlet{
 		}else if(op!=null && op.equals("c")){
 			exp = "";
 		}else {
+	//num, op, dot 값 exp변수에 넣기
 			exp += (num == null)?"": num;
 			exp += (op == null)?"": op;
 			exp += (dot == null)?"": dot;

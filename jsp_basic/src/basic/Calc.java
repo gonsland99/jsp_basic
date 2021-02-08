@@ -1,4 +1,4 @@
-package exam;
+package basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/add")
-public class Add extends HttpServlet{
+@WebServlet("/calc")
+public class Calc extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -28,13 +28,19 @@ public class Add extends HttpServlet{
 //		뉴렉처 풀이
 		String n1_ = request.getParameter("num1");
 		String n2_ = request.getParameter("num2");
+		String op = request.getParameter("operator");
+		
 		int n1 = 0;
 		int n2 = 0;
 		
 		if(!n1_.equals("")) n1 = Integer.parseInt(n1_);
 		if(!n2_.equals("")) n2 = Integer.parseInt(n2_);
 		
-		response.getWriter().printf("result : %d\n",n1 + n2);
+		if(op.equals("더하기"))
+			response.getWriter().printf("result : %d\n",n1 + n2);
+		else
+			response.getWriter().printf("result : %d\n",n1 - n2);
+			
 		
 		
 	}
