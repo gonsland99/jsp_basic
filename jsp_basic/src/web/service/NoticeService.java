@@ -91,9 +91,9 @@ public class NoticeService {
 					PreparedStatement st = con.prepareStatement(sql);
 					st.setString(1, "%"+query+"%");
 					ResultSet rs = st.executeQuery();
-					
-					count = rs.getInt("count");
-		
+					if(rs.next()) {
+						count = rs.getInt("count");
+					}
 					rs.close();
 					st.close();
 					con.close();
