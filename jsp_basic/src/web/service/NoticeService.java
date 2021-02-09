@@ -7,12 +7,54 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import web.entity.Notice;
 
 public class NoticeService {
+	public int removeNoticeAll(int[] ids){
+		return 0;
+	}
+	public int pubNoticeAll(int[] ids){
+		return 0;
+	}
+	public int insertNotice(Notice notice){
+		return 0;
+	}
+	public int deleteNotice(int[] ids){
+		int result = 0;
+		String params = "";
+		for(int i=0; i<ids.length; i++) {
+			params += ids[i];
+			if(i < ids.length-1)
+				params += ",";
+		}
+		String sql ="delete notice where id in ("+params+")"; 
+		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection(url,"GON","a12345");
+			Statement st = con.createStatement();
+			result = st.executeUpdate(sql);
+			st.close();
+			con.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	public int updateNotice(Notice notice){
+		return 0;
+	}
+	List<Notice> getNoticeNewestList(){
+		return null;
+	}
+	
 	//오버로딩
 	public List<Notice> getNoticeList(){
 		return getNoticeList("title","",1);

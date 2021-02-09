@@ -1,4 +1,4 @@
-package web.controller;
+package web.controller.notice;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,7 +13,7 @@ import web.entity.Notice;
 import web.service.NoticeService;
 
 @WebServlet("/notice/list")
-public class NoticeListController extends HttpServlet{
+public class ListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//list?f=title&q=a
