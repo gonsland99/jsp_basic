@@ -21,9 +21,30 @@ public class NoticeService {
 		return 0;
 	}
 	public int insertNotice(Notice notice){
-		return 0;
+		int result = 0;
+		String sql ="insert into notice(id, title, content, writer_id, pub) values(0,?,?,?,?)"; 
+		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection(url,"GON","a12345");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, notice.getTitle());
+			st.setString(2, notice.getContent());
+			st.setString(3, notice.getWriterId());
+			st.setBoolean(4, notice.getPub());
+			result = st.executeUpdate();
+			st.close();
+			con.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
-	public int deleteNotice(int[] ids){
+	public int deleteNoticeAll(int[] ids){
 		int result = 0;
 		String params = "";
 		for(int i=0; i<ids.length; i++) {
@@ -67,7 +88,7 @@ public class NoticeService {
 
 		String sql = "select * from ( " + 
 				"select rownum num, n.* from (select * from notice where "+field+" like ? order by regdate desc) n " +
-				") where num between ? and ?";
+				") where num between ? and ?";					//field는 ?를 쓰지않는이유: 'title'과 같이 들어감을 방지
 		// 1,11,21,31 -> an = 1+(page-1)*10 등비수열
 		// 10,20,30,40 -> page*10
 		
@@ -76,7 +97,7 @@ public class NoticeService {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con = DriverManager.getConnection(url,"GON","a12345");
-			PreparedStatement st = con.prepareStatement(sql);
+			PreparedStatement st = con.prepareStatement(sql);	//sql ?값들을 사전준비
 			st.setString(1, "%"+query+"%");
 			st.setInt(2, 1+(page-1)*10);
 			st.setInt(3, page*10);
@@ -90,7 +111,9 @@ public class NoticeService {
 				int hit = rs.getInt("hit") ;
 				String files = rs.getString("FILES");
 				String content = rs.getString("CONTENT");
+				boolean pub = rs.getBoolean("PUB");
 				
+			//sql 데이터 값들을 list화(객체화)
 				Notice notice = new Notice(
 						id,
 						title,
@@ -98,7 +121,8 @@ public class NoticeService {
 						writerId,
 						hit,
 						files,
-						content
+						content,
+						pub
 					);
 				list.add(notice);
 			}
@@ -168,6 +192,7 @@ public class NoticeService {
 						int hit = rs.getInt("hit") ;
 						String files = rs.getString("FILES");
 						String content = rs.getString("CONTENT");
+						boolean pub = rs.getBoolean("PUB");
 						
 						notice = new Notice(
 								nid,
@@ -176,7 +201,8 @@ public class NoticeService {
 								writerId,
 								hit,
 								files,
-								content
+								content,
+								pub
 							);
 					}
 		
@@ -214,6 +240,7 @@ public class NoticeService {
 				int hit = rs.getInt("hit") ;
 				String files = rs.getString("FILES");
 				String content = rs.getString("CONTENT");
+				boolean pub = rs.getBoolean("PUB");
 				
 				notice = new Notice(
 						nid,
@@ -222,7 +249,8 @@ public class NoticeService {
 						writerId,
 						hit,
 						files,
-						content
+						content,
+						pub
 					);
 			}
 
@@ -258,6 +286,7 @@ public class NoticeService {
 				int hit = rs.getInt("hit") ;
 				String files = rs.getString("FILES");
 				String content = rs.getString("CONTENT");
+				boolean pub = rs.getBoolean("PUB");
 				
 				notice = new Notice(
 						nid,
@@ -266,7 +295,8 @@ public class NoticeService {
 						writerId,
 						hit,
 						files,
-						content
+						content,
+						pub
 					);
 			}
 

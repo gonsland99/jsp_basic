@@ -20,7 +20,7 @@ public class ListController extends HttpServlet{
 	*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String[] openIds = request.getParameterValues("open-id");
+		String[] openIds = request.getParameterValues("open-id"); //왜문자형으로 받았나?
 		String[] delIds = request.getParameterValues("del-id");
 		String cmd = request.getParameter("cmd");
 		switch (cmd) {
@@ -34,7 +34,7 @@ public class ListController extends HttpServlet{
 			int[] ids = new int[delIds.length];
 			for(int i=0; i<delIds.length; i++)
 				ids[i] = Integer.parseInt(delIds[i]);
-			int result = service.deleteNotice(ids);
+			int result = service.deleteNoticeAll(ids);
 			break;
 		}
 		response.sendRedirect("list");

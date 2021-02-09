@@ -1,4 +1,4 @@
-package web.controller.notice;
+package web.controller.admin.notice;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import web.entity.Notice;
 import web.service.NoticeService;
 
-@WebServlet("/notice/detail")
+@WebServlet("/admin/notice/detail")
 public class DetailController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,12 +26,8 @@ public class DetailController extends HttpServlet{
 		NoticeService service = new NoticeService();
 		Notice notice = service.getNotice(id);
 		
-	/*	
-		redirect: 다른페이지(새로운페이지)로 보내버림
-		forward: 다른페이지 작업 이어서 진행
-	*/
 		request.setAttribute("n", notice);
-		request.getRequestDispatcher("/WEB-INF/view/notice/detail.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/admin/board/notice/detail.jsp").forward(request, response);
 
 		
 	}

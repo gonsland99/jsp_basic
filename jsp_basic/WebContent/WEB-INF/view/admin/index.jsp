@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-<title>ÄÚµù Àü¹®°¡¸¦ ¸¸µé±â À§ÇÑ ¿Â¶óÀÎ °­ÀÇ ½Ã½ºÅÛ</title>
+<title>ì½”ë”© ì „ë¬¸ê°€ë¥¼ ë§Œë“¤ê¸° ìœ„í•œ ì˜¨ë¼ì¸ ê°•ì˜ ì‹œìŠ¤í…œ</title>
 <link href="../css/admin/layout.css" type="text/css" rel="stylesheet" />
 <style>
     
@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-	<!-- header ºÎºÐ -->
+	<!-- header ë¶€ë¶„ -->
 	
 
 
@@ -32,19 +32,19 @@
 
             <h1 id="logo">
                 <a href="/index.html">
-                    <img src="/images/logo.png" alt="´º·ºÃ³ ¿Â¶óÀÎ" />
+                    <img src="/images/logo.png" alt="ë‰´ë ‰ì²˜ ì˜¨ë¼ì¸" />
 
                 </a>
             </h1>
 
             <section>
-                <h1 class="hidden">Çì´õ</h1>
+                <h1 class="hidden">í—¤ë”</h1>
 
                 <nav id="main-menu">
-                    <h1>¸ÞÀÎ¸Þ´º</h1>
+                    <h1>ë©”ì¸ë©”ë‰´</h1>
                     <ul>
-                        <li><a href="/guide">ÇÐ½À°¡ÀÌµå</a></li>
-                        <li><a href="/course">°­ÁÂ¼±ÅÃ</a></li>
+                        <li><a href="/guide">í•™ìŠµê°€ì´ë“œ</a></li>
+                        <li><a href="/course">ê°•ì¢Œì„ íƒ</a></li>
                         <li><a href="/answeris/index">AnswerIs</a></li>
                     </ul>
                 </nav>
@@ -52,31 +52,31 @@
                 <div class="sub-menu">
 
                     <section id="search-form">
-                        <h1>°­ÁÂ°Ë»ö Æû</h1>
+                        <h1>ê°•ì¢Œê²€ìƒ‰ í¼</h1>
                         <form action="/course">
                             <fieldset>
-                                <legend>°úÁ¤°Ë»öÇÊµå</legend>
-                                <label>°úÁ¤°Ë»ö</label>
+                                <legend>ê³¼ì •ê²€ìƒ‰í•„ë“œ</legend>
+                                <label>ê³¼ì •ê²€ìƒ‰</label>
                                 <input type="text" name="q" value="" />
-                                <input type="submit" value="°Ë»ö" />
+                                <input type="submit" value="ê²€ìƒ‰" />
                             </fieldset>
                         </form>
                     </section>
 
                     <nav id="acount-menu">
-                        <h1 class="hidden">È¸¿ø¸Þ´º</h1>
+                        <h1 class="hidden">íšŒì›ë©”ë‰´</h1>
                         <ul>
                             <li><a href="/index.html">HOME</a></li>
-                            <li><a href="/member/login.html">·Î±×ÀÎ</a></li>
-                            <li><a href="/member/agree.html">È¸¿ø°¡ÀÔ</a></li>
+                            <li><a href="/member/login.html">ë¡œê·¸ì¸</a></li>
+                            <li><a href="/member/agree.html">íšŒì›ê°€ìž…</a></li>
                         </ul>
                     </nav>
 
                     <nav id="member-menu" class="linear-layout">
-                        <h1 class="hidden">°í°´¸Þ´º</h1>
+                        <h1 class="hidden">ê³ ê°ë©”ë‰´</h1>
                         <ul class="linear-layout">
-                            <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="¸¶ÀÌÆäÀÌÁö" /></a></li>
-                            <li><a href="/notice/list.html"><img src="/images/txt-customer.png" alt="°í°´¼¾ÅÍ" /></a></li>
+                            <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="ë§ˆì´íŽ˜ì´ì§€" /></a></li>
+                            <li><a href="/notice/list.html"><img src="/images/txt-customer.png" alt="ê³ ê°ì„¼í„°" /></a></li>
                         </ul>
                     </nav>
 
@@ -88,7 +88,7 @@
     </header>
 
 	<!-- --------------------------- <visual> --------------------------------------- -->
-	<!-- visual ºÎºÐ -->
+	<!-- visual ë¶€ë¶„ -->
 	
 	<div id="visual">
 		<div class="content-container"></div>
@@ -98,7 +98,7 @@
 		<div class="content-container clearfix">
 
 			<!-- --------------------------- aside --------------------------------------- -->
-			<!-- aside ºÎºÐ -->
+			<!-- aside ë¶€ë¶„ -->
 			
 
 
@@ -106,35 +106,35 @@
 				<h1>ADMIN PAGE</h1>
 
 				<nav class="menu text-menu first margin-top">
-					<h1>¸¶ÀÌÆäÀÌÁö</h1>
+					<h1>ë§ˆì´íŽ˜ì´ì§€</h1>
 					<ul>
-						<li><a href="/admin/index.html">°ü¸®ÀÚÈ¨</a></li>						
-						<li><a href="/teacher/index.html">¼±»ý´ÔÆäÀÌÁö</a></li>
-						<li><a href="/student/index.html">¼ö°­»ýÆäÀÌÁö</a></li>
+						<li><a href="/admin/index.html">ê´€ë¦¬ìží™ˆ</a></li>						
+						<li><a href="/teacher/index.html">ì„ ìƒë‹˜íŽ˜ì´ì§€</a></li>
+						<li><a href="/student/index.html">ìˆ˜ê°•ìƒíŽ˜ì´ì§€</a></li>
 					</ul>
 				</nav>
 				
 				<nav class="menu text-menu">
-					<h1>¾Ë¸²°ü¸®</h1>
+					<h1>ì•Œë¦¼ê´€ë¦¬</h1>
 					<ul>						
-						<li><a href="/admin/board/notice/list.html">°øÁö»çÇ×</a></li>				
+						<li><a href="/admin/board/notice/list.html">ê³µì§€ì‚¬í•­</a></li>				
 					</ul>
 				</nav>
 								
 			</aside>
 			<!-- --------------------------- main --------------------------------------- -->
 			
-			<!-- content ºÎºÐ -->
+			<!-- content ë¶€ë¶„ -->
 			
 	<main class="main">
-		<h2 class="main title">°ü¸®ÀÚÈ¨</h2>
+		<h2 class="main title">ê´€ë¦¬ìží™ˆ</h2>
 		
 		<div class="breadcrumb">
 			<h3 class="hidden">breadlet</h3>
 			<ul>
 				<li>home</li>
-				<li>¸¶ÀÌÆäÀÌÁö</li>
-				<li>È¨</li>
+				<li>ë§ˆì´íŽ˜ì´ì§€</li>
+				<li>í™ˆ</li>
 			</ul>
 		</div>
 		
@@ -151,30 +151,30 @@
 
         <footer id="footer">
             <div class="content-container">
-                <h2 id="footer-logo"><img src="/images/logo-footer.png" alt="È¸»çÁ¤º¸"></h2>
+                <h2 id="footer-logo"><img src="/images/logo-footer.png" alt="íšŒì‚¬ì •ë³´"></h2>
     
                 <div id="company-info">
                     <dl>
-                        <dt>ÁÖ¼Ò:</dt>
-                        <dd>¼­¿ïÆ¯º°½Ã </dd>
-                        <dt>°ü¸®ÀÚ¸ÞÀÏ:</dt>
+                        <dt>ì£¼ì†Œ:</dt>
+                        <dd>ì„œìš¸íŠ¹ë³„ì‹œ </dd>
+                        <dt>ê´€ë¦¬ìžë©”ì¼:</dt>
                         <dd>admin@newlecture.com</dd>
                     </dl>
                     <dl>
-                        <dt>»ç¾÷ÀÚ µî·Ï¹øÈ£:</dt>
+                        <dt>ì‚¬ì—…ìž ë“±ë¡ë²ˆí˜¸:</dt>
                         <dd>111-11-11111</dd>
-                        <dt>Åë½Å ÆÇ¸Å¾÷:</dt>
-                        <dd>½Å°íÁ¦ 1111 È£</dd>
+                        <dt>í†µì‹  íŒë§¤ì—…:</dt>
+                        <dd>ì‹ ê³ ì œ 1111 í˜¸</dd>
                     </dl>
                     <dl>
-                        <dt>»óÈ£:</dt>
-                        <dd>´º·ºÃ³</dd>
-                        <dt>´ëÇ¥:</dt>
-                        <dd>È«±æµ¿</dd>
-                        <dt>ÀüÈ­¹øÈ£:</dt>
+                        <dt>ìƒí˜¸:</dt>
+                        <dd>ë‰´ë ‰ì²˜</dd>
+                        <dt>ëŒ€í‘œ:</dt>
+                        <dd>í™ê¸¸ë™</dd>
+                        <dt>ì „í™”ë²ˆí˜¸:</dt>
                         <dd>111-1111-1111</dd>
                     </dl>
-                    <div id="copyright" class="margin-top">Copyright ¨Ï newlecture.com 2012-2014 All Right Reserved.
+                    <div id="copyright" class="margin-top">Copyright â“’ newlecture.com 2012-2014 All Right Reserved.
                         Contact admin@newlecture.com for more information</div>
                 </div>
             </div>

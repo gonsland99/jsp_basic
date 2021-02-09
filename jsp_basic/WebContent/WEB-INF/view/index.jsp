@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>ÄÚµù Àü¹®°¡¸¦ ¸¸µé±â À§ÇÑ ¿Â¶óÀÎ °­ÀÇ ½Ã½ºÅÛ</title>
+    <title>ì½”ë”© ì „ë¬¸ê°€ë¥¼ ë§Œë“¤ê¸° ìœ„í•œ ì˜¨ë¼ì¸ ê°•ì˜ ì‹œìŠ¤í…œ</title>
     <meta charset="UTF-8">
-    <title>°øÁö»çÇ×¸ñ·Ï</title>
+    <title>ê³µì§€ì‚¬í•­ëª©ë¡</title>
 
     <link href="/css/layout.css" type="text/css" rel="stylesheet" />
     <link href="/css/index.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- header ºÎºÐ -->
+    <!-- header ë¶€ë¶„ -->
 
     <header id="header">
         
@@ -22,20 +22,20 @@
 
             <h1 id="logo">
                 <a href="/index.html">
-                    <img src="/images/logo.png" alt="´º·ºÃ³ ¿Â¶óÀÎ" />
+                    <img src="/images/logo.png" alt="ë‰´ë ‰ì²˜ ì˜¨ë¼ì¸" />
 
                 </a>
             </h1>
 
             <section>
-                <h1 class="hidden">Çì´õ</h1>
+                <h1 class="hidden">í—¤ë”</h1>
 
                 <nav id="main-menu">
-                    <h1>¸ÞÀÎ¸Þ´º</h1>
+                    <h1>ë©”ì¸ë©”ë‰´</h1>
                     <ul>
-                        <li><a href="/guide">ÇÐ½À°¡ÀÌµå</a></li>
+                        <li><a href="/guide">í•™ìŠµê°€ì´ë“œ</a></li>
 
-                        <li><a href="/course">°­ÁÂ¼±ÅÃ</a></li>
+                        <li><a href="/course">ê°•ì¢Œì„ íƒ</a></li>
                         <li><a href="/answeris/index">AnswerIs</a></li>
                     </ul>
                 </nav>
@@ -43,31 +43,31 @@
                 <div class="sub-menu">
 
                     <section id="search-form">
-                        <h1>°­ÁÂ°Ë»ö Æû</h1>
+                        <h1>ê°•ì¢Œê²€ìƒ‰ í¼</h1>
                         <form action="/course">
                             <fieldset>
-                                <legend>°úÁ¤°Ë»öÇÊµå</legend>
-                                <label>°úÁ¤°Ë»ö</label>
+                                <legend>ê³¼ì •ê²€ìƒ‰í•„ë“œ</legend>
+                                <label>ê³¼ì •ê²€ìƒ‰</label>
                                 <input type="text" name="q" value="" />
-                                <input type="submit" value="°Ë»ö" />
+                                <input type="submit" value="ê²€ìƒ‰" />
                             </fieldset>
                         </form>
                     </section>
 
                     <nav id="acount-menu">
-                        <h1 class="hidden">È¸¿ø¸Þ´º</h1>
+                        <h1 class="hidden">íšŒì›ë©”ë‰´</h1>
                         <ul>
                             <li><a href="/index.html">HOME</a></li>
-                            <li><a href="/member/login.html">·Î±×ÀÎ</a></li>
-                            <li><a href="/member/agree.html">È¸¿ø°¡ÀÔ</a></li>
+                            <li><a href="/member/login.html">ë¡œê·¸ì¸</a></li>
+                            <li><a href="/member/agree.html">íšŒì›ê°€ìž…</a></li>
                         </ul>
                     </nav>
 
                     <nav id="member-menu" class="linear-layout">
-                        <h1 class="hidden">°í°´¸Þ´º</h1>
+                        <h1 class="hidden">ê³ ê°ë©”ë‰´</h1>
                         <ul class="linear-layout">
-                            <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="¸¶ÀÌÆäÀÌÁö" /></a></li>
-                            <li><a href="/notice/list.html"><img src="/images/txt-customer.png" alt="°í°´¼¾ÅÍ" /></a></li>
+                            <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="ë§ˆì´íŽ˜ì´ì§€" /></a></li>
+                            <li><a href="/notice/list.html"><img src="/images/txt-customer.png" alt="ê³ ê°ì„¼í„°" /></a></li>
                         </ul>
                     </nav>
 
@@ -81,16 +81,16 @@
 
     <!-- --------------------------- <body> --------------------------------------- -->
 
-    <!-- content ºÎºÐ -->
+    <!-- content ë¶€ë¶„ -->
 
 
 
     <div id="visual" class="">
         <div class="content-container">
-            <h2 class="hidden">½Å±Ô °­ÁÂ¸ñ·Ï</h2>
+            <h2 class="hidden">ì‹ ê·œ ê°•ì¢Œëª©ë¡</h2>
             <!-- <ul class="mov-button">
-			<li class="prev-button">ÀÌÀü</li>
-			<li class="next-button">´ÙÀ½</li>
+			<li class="prev-button">ì´ì „</li>
+			<li class="next-button">ë‹¤ìŒ</li>
 		</ul> -->
             <ul class="banner">
 
@@ -114,16 +114,16 @@
     </div>
     <div id="notice">
         <div class="content-container">
-            <span class="title">Á¦´ë·ÎµÈ Àü¹®°¡µéÀÌ ¸¸µé¾î°¡´Â <span style="color:yellow;font-size:15px;">IT PROFESSIONAL <span style="color:#00ffff;">NEW</span>
+            <span class="title">ì œëŒ€ë¡œëœ ì „ë¬¸ê°€ë“¤ì´ ë§Œë“¤ì–´ê°€ëŠ” <span style="color:yellow;font-size:15px;">IT PROFESSIONAL <span style="color:#00ffff;">NEW</span>
                     ONLINE <span style="color:#00ffff;">LECTURE</span> MARKET</span></span>
-            <!--<a class="detail-button">ÀÚ¼¼È÷</a>-->
+            <!--<a class="detail-button">ìžì„¸ížˆ</a>-->
         </div>
     </div>
-    <!-- ----- °øÁö»çÇ× ÁÙ ------------------------------------------------------------------------------ -->
+    <!-- ----- ê³µì§€ì‚¬í•­ ì¤„ ------------------------------------------------------------------------------ -->
     <div id="information">
         <div class="content-container">
             <section class="guide">
-                <h1 class="title">°­ÀÇ ÇÃ·¹ÀÌ¾î »ç¿ë¹æ¹ý ¾È³»</h1>
+                <h1 class="title">ê°•ì˜ í”Œë ˆì´ì–´ ì‚¬ìš©ë°©ë²• ì•ˆë‚´</h1>
                 <div class="margin-top">
                     <a href="customer/faq/1"><img src="images/customer/installInfo.png" /></a>
                 </div>
@@ -135,46 +135,46 @@
             </div> -->
             </section>
             <section class="course-info">
-                <h1 class="title text-center">´º·ºÃ³ ÇÏÀÌºê¸®µå °úÁ¤ ¸ðÁý</h1>
+                <h1 class="title text-center">ë‰´ë ‰ì²˜ í•˜ì´ë¸Œë¦¬ë“œ ê³¼ì • ëª¨ì§‘</h1>
                 <ul class="list">
-                    <li>ÇöÀç ¸ðÁý °úÁ¤ÀÌ ¾ø½À´Ï´Ù.</li>
+                    <li>í˜„ìž¬ ëª¨ì§‘ ê³¼ì •ì´ ì—†ìŠµë‹ˆë‹¤.</li>
                 </ul>
             </section>
             <section class="notice">
-                <h1 class="title">°øÁö»çÇ×</h1>
+                <h1 class="title">ê³µì§€ì‚¬í•­</h1>
                 <ul class="list margin-top">
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">½ºÇÁ¸µ 8°­±îÁöÀÇ ¿¹Á¦ ÄÚµå</a>
+                            <a href="notice/detail.html">ìŠ¤í”„ë§ 8ê°•ê¹Œì§€ì˜ ì˜ˆì œ ì½”ë“œ</a>
                         </span>
                         <span>2019-08-18</span>
                     </li>
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">½ºÇÁ¸µ DI ¿¹Á¦ ÄÚµå</a>
+                            <a href="notice/detail.html">ìŠ¤í”„ë§ DI ì˜ˆì œ ì½”ë“œ</a>
                         </span>
                         <span>2019-08-15</span>
                     </li>
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">´º·º½Ü 9¿ù ÃÊ ±¹±â°úÁ¤ ¸ðÁý ¾È³»</a>
+                            <a href="notice/detail.html">ë‰´ë ‰ìŒ¤ 9ì›” ì´ˆ êµ­ê¸°ê³¼ì • ëª¨ì§‘ ì•ˆë‚´</a>
                         </span>
                         <span>2019-06-11</span>
                     </li>
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">´º·ºÃ³ °­ÀÇ ¼ö°­ ¹æ½Ä ¾È³»</a>
+                            <a href="notice/detail.html">ë‰´ë ‰ì²˜ ê°•ì˜ ìˆ˜ê°• ë°©ì‹ ì•ˆë‚´</a>
                         </span>
                         <span>2019-05-24</span>
                     </li>
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">ÀÚ¹Ù ±¸Á¶ÀûÀÎ ÇÁ·Î±×·¡¹Ö °­ÀÇ ¿¹Á¦ ÆÄÀÏ</a>
+                            <a href="notice/detail.html">ìžë°” êµ¬ì¡°ì ì¸ í”„ë¡œê·¸ëž˜ë° ê°•ì˜ ì˜ˆì œ íŒŒì¼</a>
                         </span>
                         <span>2019-04-24</span>
                     </li>
@@ -184,20 +184,20 @@
         </div>
     </div>
 
-    <!-- ----- Ä¿¹Â´ÏÆ¼ ½ÃÀÛ ÁÙ -------------------------------------------------------------------------------------------- -->
+    <!-- ----- ì»¤ë®¤ë‹ˆí‹° ì‹œìž‘ ì¤„ -------------------------------------------------------------------------------------------- -->
 
 
 
-    <!-- ----- Ä¿¹Â´ÏÆ¼ ½ÃÀÛ ÁÙ -------------------------------------------------------------------------------------------- -->
+    <!-- ----- ì»¤ë®¤ë‹ˆí‹° ì‹œìž‘ ì¤„ -------------------------------------------------------------------------------------------- -->
     <!-- <div class="margin-top">
 	<div style="height: 170px; margin-top:10px;" class="content-container border">
 	</div>
 </div> -->
 
-    <!-- ----- °­ÁÂ ¸ñ·Ï ½ÃÀÛ ÁÙ --------------------------------------------------------------------------------------------------------- -->
+    <!-- ----- ê°•ì¢Œ ëª©ë¡ ì‹œìž‘ ì¤„ --------------------------------------------------------------------------------------------------------- -->
     <main id="course">
         <section class="content-container list list-horizontal list-course list-course-index">
-            <h1>¿Â¶óÀÎ <span class="color-orange">´Ü°ú °úÁ¤</span></h1>
+            <h1>ì˜¨ë¼ì¸ <span class="color-orange">ë‹¨ê³¼ ê³¼ì •</span></h1>
             <div>
                
             </div>
@@ -210,13 +210,13 @@
                     </div>
                     <div>
                         <div>
-                            <a href="course/16"><span class="text-strong text-ellipsis">¸ÚÁø ÇÁ·Î±×·¡¸Ó°¡ µÇ±â À§ÇÑ »çÀüÁö½Ä</span></a>
+                            <a href="course/16"><span class="text-strong text-ellipsis">ë©‹ì§„ í”„ë¡œê·¸ëž˜ë¨¸ê°€ ë˜ê¸° ìœ„í•œ ì‚¬ì „ì§€ì‹</span></a>
                         </div>
                         <div class="price">
                             <span class="normal ">
                                 <span class="text-orange text-strong">
                                     0
-                                </span> ¿ø
+                                </span> ì›
                             </span> <span class="event">
 
 
@@ -224,8 +224,8 @@
                             </span>
                         </div>
                         <div class="footer text-strong">
-                            <span class="writer">¼±»ý´Ô : newlec </span>
-                            <span class="update">°³¼³ÀÏ : 2019-09-07
+                            <span class="writer">ì„ ìƒë‹˜ : newlec </span>
+                            <span class="update">ê°œì„¤ì¼ : 2019-09-07
                             </span>
                         </div>
                     </div>
@@ -237,13 +237,13 @@
                     </div>
                     <div>
                         <div>
-                            <a href="course/10"><span class="text-strong text-ellipsis">À¥ Ç¥ÁØ±â¹ÝÀÇ À¥ ÆÛºí¸®½Ì HTML5 Æí</span></a>
+                            <a href="course/10"><span class="text-strong text-ellipsis">ì›¹ í‘œì¤€ê¸°ë°˜ì˜ ì›¹ í¼ë¸”ë¦¬ì‹± HTML5 íŽ¸</span></a>
                         </div>
                         <div class="price">
                             <span class="normal ">
                                 <span class="text-orange text-strong">
                                     45,000
-                                </span> ¿ø
+                                </span> ì›
                             </span> <span class="event">
 
 
@@ -251,8 +251,8 @@
                             </span>
                         </div>
                         <div class="footer text-strong">
-                            <span class="writer">¼±»ý´Ô : newlec </span>
-                            <span class="update">°³¼³ÀÏ : 2019-09-07
+                            <span class="writer">ì„ ìƒë‹˜ : newlec </span>
+                            <span class="update">ê°œì„¤ì¼ : 2019-09-07
                             </span>
                         </div>
                     </div>
@@ -266,26 +266,26 @@
                     </div>
                     <div>
                         <div>
-                            <a href="course/8"><span class="text-strong text-ellipsis">Oracle SQL ÇÁ·Î±×·¡¹Ö</span></a>
+                            <a href="course/8"><span class="text-strong text-ellipsis">Oracle SQL í”„ë¡œê·¸ëž˜ë°</span></a>
                         </div>
                         <div class="price">
                             <span class="normal deprecated">
                                 <span class="text-gray">
                                     44,000
-                                </span> ¿ø
+                                </span> ì›
                             </span> <span class="event">
 
 
                                 <span class="color-red text-strong">
                                     0
-                                </span>¿ø
+                                </span>ì›
 
 
                             </span>
                         </div>
                         <div class="footer text-strong">
-                            <span class="writer">¼±»ý´Ô : newlec </span>
-                            <span class="update">°³¼³ÀÏ : 2019-09-07
+                            <span class="writer">ì„ ìƒë‹˜ : newlec </span>
+                            <span class="update">ê°œì„¤ì¼ : 2019-09-07
                             </span>
                         </div>
                     </div>
@@ -297,13 +297,13 @@
                     </div>
                     <div>
                         <div>
-                            <a href="course/7"><span class="text-strong text-ellipsis">½ºÇÁ¸µ 3.x MVC À¥ ÇÁ·Î±×·¡¹Ö</span></a>
+                            <a href="course/7"><span class="text-strong text-ellipsis">ìŠ¤í”„ë§ 3.x MVC ì›¹ í”„ë¡œê·¸ëž˜ë°</span></a>
                         </div>
                         <div class="price">
                             <span class="normal ">
                                 <span class="text-orange text-strong">
                                     33,600
-                                </span> ¿ø
+                                </span> ì›
                             </span> <span class="event">
 
 
@@ -311,8 +311,8 @@
                             </span>
                         </div>
                         <div class="footer text-strong">
-                            <span class="writer">¼±»ý´Ô : newlec </span>
-                            <span class="update">°³¼³ÀÏ : 2019-09-07
+                            <span class="writer">ì„ ìƒë‹˜ : newlec </span>
+                            <span class="update">ê°œì„¤ì¼ : 2019-09-07
                             </span>
                         </div>
                     </div>
@@ -323,26 +323,26 @@
                     </div>
                     <div>
                         <div>
-                            <a href="course/2"><span class="text-strong text-ellipsis">ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö</span></a>
+                            <a href="course/2"><span class="text-strong text-ellipsis">ìžë°” í”„ë¡œê·¸ëž˜ë°</span></a>
                         </div>
                         <div class="price">
                             <span class="normal deprecated">
                                 <span class="text-gray">
                                     22,000
-                                </span> ¿ø
+                                </span> ì›
                             </span> <span class="event">
 
 
                                 <span class="color-red text-strong">
                                     0
-                                </span>¿ø
+                                </span>ì›
 
 
                             </span>
                         </div>
                         <div class="footer text-strong">
-                            <span class="writer">¼±»ý´Ô : newlec </span>
-                            <span class="update">°³¼³ÀÏ : 2019-09-07
+                            <span class="writer">ì„ ìƒë‹˜ : newlec </span>
+                            <span class="update">ê°œì„¤ì¼ : 2019-09-07
                             </span>
                         </div>
                     </div>
@@ -352,17 +352,17 @@
             </ul>
 
             <div class="more">
-                <!-- <span class="border padding">´Ü°ú °úÁ¤ ¸ñ·Ï ´õº¸±â</span> -->
+                <!-- <span class="border padding">ë‹¨ê³¼ ê³¼ì • ëª©ë¡ ë”ë³´ê¸°</span> -->
             </div>
         </section>
 
-        <!-- ------- ¿Â¶óÀÎ ÆÐÅ°Áö °úÁ¤ ------------------------------------------------------------------------------------------------- -->
+        <!-- ------- ì˜¨ë¼ì¸ íŒ¨í‚¤ì§€ ê³¼ì • ------------------------------------------------------------------------------------------------- -->
 
         <div class="content-container">
-            <h3 class="-text- center green bold -margin- top">Çù·Â¾÷Ã¼</h3>
+            <h3 class="-text- center green bold -margin- top">í˜‘ë ¥ì—…ì²´</h3>
             <ul class="-list- horizontal center -margin- bottom top b20">
-                <li><a target="_blank" href="http://www.notepubs.com"><img src="images/notepubs.png" alt="³ëÆ®Æà½º" /></a></li>
-                <li><a target="_blank" href="http://www.namoolab.com"><img src="images/namoolab.png" alt="³ª¹«·¦¿¬±¸¼Ò" /></a></li>                
+                <li><a target="_blank" href="http://www.notepubs.com"><img src="images/notepubs.png" alt="ë…¸íŠ¸íŽìŠ¤" /></a></li>
+                <li><a target="_blank" href="http://www.namoolab.com"><img src="images/namoolab.png" alt="ë‚˜ë¬´ëž©ì—°êµ¬ì†Œ" /></a></li>                
                
             </ul>
         </div>
@@ -380,30 +380,30 @@
 
     <footer id="footer">
         <div class="content-container">
-            <h2 id="footer-logo"><img src="images/logo-footer.png" alt="È¸»çÁ¤º¸"></h2>
+            <h2 id="footer-logo"><img src="images/logo-footer.png" alt="íšŒì‚¬ì •ë³´"></h2>
 
             <div id="company-info">
                 <dl>
-                    <dt>ÁÖ¼Ò:</dt>
-                    <dd>¼­¿ïÆ¯º°½Ã </dd>
-                    <dt>°ü¸®ÀÚ¸ÞÀÏ:</dt>
+                    <dt>ì£¼ì†Œ:</dt>
+                    <dd>ì„œìš¸íŠ¹ë³„ì‹œ </dd>
+                    <dt>ê´€ë¦¬ìžë©”ì¼:</dt>
                     <dd>admin@newlecture.com</dd>
                 </dl>
                 <dl>
-                    <dt>»ç¾÷ÀÚ µî·Ï¹øÈ£:</dt>
+                    <dt>ì‚¬ì—…ìž ë“±ë¡ë²ˆí˜¸:</dt>
                     <dd>111-11-11111</dd>
-                    <dt>Åë½Å ÆÇ¸Å¾÷:</dt>
-                    <dd>½Å°íÁ¦ 1111 È£</dd>
+                    <dt>í†µì‹  íŒë§¤ì—…:</dt>
+                    <dd>ì‹ ê³ ì œ 1111 í˜¸</dd>
                 </dl>
                 <dl>
-                    <dt>»óÈ£:</dt>
-                    <dd>´º·ºÃ³</dd>
-                    <dt>´ëÇ¥:</dt>
-                    <dd>È«±æµ¿</dd>
-                    <dt>ÀüÈ­¹øÈ£:</dt>
+                    <dt>ìƒí˜¸:</dt>
+                    <dd>ë‰´ë ‰ì²˜</dd>
+                    <dt>ëŒ€í‘œ:</dt>
+                    <dd>í™ê¸¸ë™</dd>
+                    <dt>ì „í™”ë²ˆí˜¸:</dt>
                     <dd>111-1111-1111</dd>
                 </dl>
-                <div id="copyright" class="margin-top">Copyright ¨Ï newlecture.com 2012-2014 All Right Reserved.
+                <div id="copyright" class="margin-top">Copyright â“’ newlecture.com 2012-2014 All Right Reserved.
                     Contact admin@newlecture.com for more information</div>
             </div>
         </div>
