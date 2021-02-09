@@ -7,9 +7,7 @@
 <meta charset="UTF-8">
 <title>calculator</title>
 <style>
-*{
-	margin: 0; padding: 0;
-}
+*{margin: 0; padding: 0;}
 table{
 	border: 5px solid #999;
 	padding: 10px;
@@ -31,16 +29,14 @@ input{
 	border-radius: 5px;
 	font-size: 18px;
 }
-.zero input{
-	width: 110px;
-}
+.zero input{width: 110px;}
 </style>
 </head>
 <body>
-	<form action="calc3" method="post">
+	<form action="calc4" method="post">
 		<table>
 			<tr>
-				<td class="output" colspan="4">0</td>
+				<td class="output" colspan="4"><%=request.getAttribute("exp")%></td>
 			</tr>
 			<tr>
 				<td><input type="submit" name="operator" value="ce"/></td>
