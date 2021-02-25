@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+
+	<Resource 
+		name = "jdbc/testDB" 
+		auth = "Container" 
+		type = "javax.sql.DataSource"
+		username = "root" 
+		password = "1234" 
+		driverClassName = "com.mysql.jdbc.Driver"
+		factory = "org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		url = "jdbc:mysql://localhost:3306/testDB?useUnicode=true&amp;serverTimezone=Asia/Seoul"
+		maxActive = "500" maxIdle = "100" 
+	/>
+<!-- 디비를 추가할 때 마다 리소스 추가해야함 -->
+</context>
