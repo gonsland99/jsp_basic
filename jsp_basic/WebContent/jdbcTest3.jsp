@@ -5,12 +5,12 @@
 <%@ page import="java.sql.*" %>
 <%
 	Connection con = null;
-	String sql = "insert into student (num,name) values(10,'iu')";
+	String sql = "insert into board(board_num,board_name,board_pass,board_subject,board_content) values(1,'gon','1234','테스트','test')";
 	Statement st = null;
 	//JNDI(Java Naming Directory Interface)
 	try{
 		Context init = new InitialContext();
-		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/testDB");
+		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/tes");
 		con = ds.getConnection();
 		st = con.createStatement();
 		
