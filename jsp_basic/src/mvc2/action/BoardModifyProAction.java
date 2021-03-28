@@ -1,11 +1,12 @@
-package action;
+package mvc2.action;
 
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mvc2.vo.ActionForward;
+import mvc2.vo.BoardBean;
 import svc.BoardModifyProService;
-import vo.ActionForward;
-import vo.BoardBean;
 
 public class BoardModifyProAction implements Action {
 
@@ -23,7 +24,7 @@ public class BoardModifyProAction implements Action {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out=response.getWriter();
 			out.println("<script>");
-			out.println("alert('수정할 권한이 없습니다.');");
+			out.println("alert('?????? �????? ???��????.');");
 			out.println("history.back();");
 			out.println("</script>");
 			out.close();
@@ -38,7 +39,7 @@ public class BoardModifyProAction implements Action {
 				response.setContentType("text/html;charset=UTF-8");
 				PrintWriter out=response.getWriter();
 				out.println("<script>");
-				out.println("alert('수정실패');");
+				out.println("alert('?????��??');");
 				out.println("history.back()");
 				out.println("</script>");
 				out.close();

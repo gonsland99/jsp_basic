@@ -1,9 +1,11 @@
 package svc;
 
-import static db.JdbcUtil.*;
+import static mvc2.db.JdbcUtil.*;
+
 import java.sql.Connection;
-import vo.BoardBean;
-import dao.BoardDAO;
+
+import mvc2.dao.BoardDAO;
+import mvc2.vo.BoardBean;
 
 public class BoardModifyProService {
 

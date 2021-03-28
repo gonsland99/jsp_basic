@@ -1,14 +1,16 @@
-package action;
+package mvc2.action;
 
 import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import svc.BoardWriteProService;
-import vo.ActionForward;
-import vo.BoardBean;
+
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+import mvc2.vo.ActionForward;
+import mvc2.vo.BoardBean;
 
 public class BoardWriteProAction implements Action {
 
@@ -41,7 +43,7 @@ public class BoardWriteProAction implements Action {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('등록실패')");
+			out.println("alert('?��??��??')");
 			out.println("history.back();");
 			out.println("</script>");
 			out.close();

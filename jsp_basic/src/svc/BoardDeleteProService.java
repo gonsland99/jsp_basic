@@ -1,11 +1,13 @@
 package svc;
 
-import static db.JdbcUtil.close;
-import static db.JdbcUtil.commit;
-import static db.JdbcUtil.getConnection;
-import static db.JdbcUtil.rollback;
+import static mvc2.db.JdbcUtil.close;
+import static mvc2.db.JdbcUtil.commit;
+import static mvc2.db.JdbcUtil.getConnection;
+import static mvc2.db.JdbcUtil.rollback;
+
 import java.sql.Connection;
-import dao.BoardDAO;
+
+import mvc2.dao.BoardDAO;
 
 public class BoardDeleteProService {
 

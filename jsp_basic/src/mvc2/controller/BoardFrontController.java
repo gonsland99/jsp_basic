@@ -1,4 +1,4 @@
-package controller;
+package mvc2.controller;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -7,16 +7,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import action.Action;
-import action.BoardDeleteProAction;
-import action.BoardDetailAction;
-import action.BoardListAction;
-import action.BoardModifyFormAction;
-import action.BoardModifyProAction;
-import action.BoardReplyFormAction;
-import action.BoardReplyProAction;
-import action.BoardWriteProAction;
-import vo.ActionForward;
+
+import mvc2.action.Action;
+import mvc2.action.BoardDeleteProAction;
+import mvc2.action.BoardDetailAction;
+import mvc2.action.BoardListAction;
+import mvc2.action.BoardModifyFormAction;
+import mvc2.action.BoardModifyProAction;
+import mvc2.action.BoardReplyFormAction;
+import mvc2.action.BoardReplyProAction;
+import mvc2.action.BoardWriteProAction;
+import mvc2.vo.ActionForward;
 
 @WebServlet("*.do")
 public class BoardFrontController extends HttpServlet {

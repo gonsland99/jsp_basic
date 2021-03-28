@@ -1,4 +1,4 @@
-package db;
+package mvc2.db;
 
 import java.sql.Connection;
 

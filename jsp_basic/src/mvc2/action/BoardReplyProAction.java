@@ -1,11 +1,12 @@
-package action;
+package mvc2.action;
 
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mvc2.vo.ActionForward;
+import mvc2.vo.BoardBean;
 import svc.BoardReplyProService;
-import vo.ActionForward;
-import vo.BoardBean;
 
 public class BoardReplyProAction implements Action {
 	
@@ -35,7 +36,7 @@ public class BoardReplyProAction implements Action {
 	   			response.setContentType("text/html;charset=UTF-8");
 	   			PrintWriter out = response.getWriter();
 	   			out.println("<script>");
-	   			out.println("alert('ë‹µìž¥ì‹¤íŒ¨')");
+	   			out.println("alert('?µì?¥ì?¤í??')");
 	   			out.println("history.back()");
 	   			out.println("</script>");
 	   			out.close();

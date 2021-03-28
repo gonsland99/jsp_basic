@@ -1,10 +1,11 @@
-package action;
+package mvc2.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mvc2.vo.ActionForward;
+import mvc2.vo.BoardBean;
 import svc.BoardDetailService;
-import vo.ActionForward;
-import vo.BoardBean;
 
 public class BoardModifyFormAction implements Action {
 	

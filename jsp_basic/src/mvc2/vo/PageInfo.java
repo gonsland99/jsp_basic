@@ -1,4 +1,4 @@
-package vo;
+package mvc2.vo;
 
 public class PageInfo {
 

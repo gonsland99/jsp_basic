@@ -1,5 +1,5 @@
-<%@page import="vo.PageInfo"%>
-<%@page import="vo.BoardBean"%>
+<%@page import="mvc2.vo.PageInfo"%>
+<%@page import="mvc2.vo.BoardBean"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

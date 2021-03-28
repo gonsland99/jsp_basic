@@ -1,13 +1,15 @@
-package dao;
+package mvc2.dao;
 
-import static db.JdbcUtil.*;
+import static mvc2.db.JdbcUtil.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.DataSource;
-import vo.BoardBean;
+
+import mvc2.vo.BoardBean;
 
 public class BoardDAO {
 
@@ -30,7 +32,7 @@ public class BoardDAO {
 		this.con = con;
 	}
 
-	//글의 개수 구하기.
+	//�??? �??? 구�??�?.
 	public int selectListCount() {
 
 		int listCount= 0;
@@ -48,7 +50,7 @@ public class BoardDAO {
 				listCount=rs.getInt(1);
 			}
 		}catch(Exception ex){
-			System.out.println("getListCount 에러: " + ex);			
+			System.out.println("getListCount ????: " + ex);			
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -58,7 +60,7 @@ public class BoardDAO {
 
 	}
 
-	//글 목록 보기.	
+	//�? 목�? 보기.	
 	public ArrayList<BoardBean> selectArticleList(int page,int limit){
 
 		PreparedStatement pstmt = null;
@@ -66,7 +68,7 @@ public class BoardDAO {
 		String board_list_sql="select * from board order by BOARD_RE_REF desc,BOARD_RE_SEQ asc limit ?,10";
 		ArrayList<BoardBean> articleList = new ArrayList<BoardBean>();
 		BoardBean board = null;
-		int startrow=(page-1)*10; //읽기 시작할 row 번호..	
+		int startrow=(page-1)*10; //?�기 ?????? row �???..	
 
 		try{
 			pstmt = con.prepareStatement(board_list_sql);
@@ -89,7 +91,7 @@ public class BoardDAO {
 			}
 
 		}catch(Exception ex){
-			System.out.println("getBoardList 에러 : " + ex);
+			System.out.println("getBoardList ???? : " + ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -99,7 +101,7 @@ public class BoardDAO {
 
 	}
 
-	//글 내용 보기.
+	//�? ?��?? 보기.
 	public BoardBean selectArticle(int board_num){
 
 		PreparedStatement pstmt = null;
@@ -125,7 +127,7 @@ public class BoardDAO {
 				boardBean.setBOARD_DATE(rs.getDate("BOARD_DATE"));
 			}
 		}catch(Exception ex){
-			System.out.println("getDetail 에러 : " + ex);
+			System.out.println("getDetail ???? : " + ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -135,7 +137,7 @@ public class BoardDAO {
 
 	}
 
-	//글 등록.
+	//�? ?��?.
 	public int insertArticle(BoardBean article){
 
 		PreparedStatement pstmt = null;
@@ -170,7 +172,7 @@ public class BoardDAO {
 			insertCount=pstmt.executeUpdate();
 
 		}catch(Exception ex){
-			System.out.println("boardInsert 에러 : "+ex);
+			System.out.println("boardInsert ???? : "+ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -180,7 +182,7 @@ public class BoardDAO {
 
 	}
 
-	//글 답변.
+	//�? ?��?.
 	public int insertReplyArticle(BoardBean article){
 
 		PreparedStatement pstmt = null;
@@ -221,14 +223,14 @@ public class BoardDAO {
 			pstmt.setString(3, article.getBOARD_PASS());
 			pstmt.setString(4, article.getBOARD_SUBJECT());
 			pstmt.setString(5, article.getBOARD_CONTENT());
-			pstmt.setString(6, ""); //답장에는 파일을 업로드하지 않음.
+			pstmt.setString(6, ""); //?��?��???? ???��?? ??�?????�? ????.
 			pstmt.setInt(7, re_ref);
 			pstmt.setInt(8, re_lev);
 			pstmt.setInt(9, re_seq);
 			pstmt.setInt(10, 0);
 			insertCount = pstmt.executeUpdate();
 		}catch(SQLException ex){
-			System.out.println("boardReply 에러 : "+ex);
+			System.out.println("boardReply ???? : "+ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -238,7 +240,7 @@ public class BoardDAO {
 
 	}
 
-	//글 수정.
+	//�? ????.
 	public int updateArticle(BoardBean article){
 
 		int updateCount = 0;
@@ -252,7 +254,7 @@ public class BoardDAO {
 			pstmt.setInt(3, article.getBOARD_NUM());
 			updateCount = pstmt.executeUpdate();
 		}catch(Exception ex){
-			System.out.println("boardModify 에러 : " + ex);
+			System.out.println("boardModify ???? : " + ex);
 		}finally{
 			close(pstmt);
 		}
@@ -261,7 +263,7 @@ public class BoardDAO {
 
 	}
 
-	//글 삭제.
+	//�? ????.
 	public int deleteArticle(int board_num){
 
 		PreparedStatement pstmt = null;
@@ -273,7 +275,7 @@ public class BoardDAO {
 			pstmt.setInt(1, board_num);
 			deleteCount=pstmt.executeUpdate();
 		}catch(Exception ex){
-			System.out.println("boardDelete 에러 : "+ex);
+			System.out.println("boardDelete ???? : "+ex);
 		}	finally{
 			close(pstmt);
 		}
@@ -282,7 +284,7 @@ public class BoardDAO {
 
 	}
 
-	//조회수 업데이트.
+	//조�???? ???��?��??.
 	public int updateReadCount(int board_num){
 
 		PreparedStatement pstmt = null;
@@ -294,7 +296,7 @@ public class BoardDAO {
 			pstmt.setInt(1, board_num);
 			updateCount = pstmt.executeUpdate();
 		}catch(SQLException ex){
-			System.out.println("updateReadCount 에러 : "+ex);
+			System.out.println("updateReadCount ???? : "+ex);
 		}
 		finally{
 			close(pstmt);
@@ -305,7 +307,7 @@ public class BoardDAO {
 
 	}
 
-	//글쓴이인지 확인.
+	//�??��?��?��? ????.
 	public boolean isArticleBoardWriter(int board_num,String pass){
 
 		PreparedStatement pstmt = null;
@@ -323,7 +325,7 @@ public class BoardDAO {
 				}
 			}
 		}catch(SQLException ex){
-			System.out.println("isBoardWriter 에러 : "+ex);
+			System.out.println("isBoardWriter ???? : "+ex);
 		}
 		finally{
 			close(rs);

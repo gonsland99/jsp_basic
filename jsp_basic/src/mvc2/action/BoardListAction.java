@@ -1,12 +1,13 @@
-package action;
+package mvc2.action;
 
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mvc2.vo.ActionForward;
+import mvc2.vo.BoardBean;
+import mvc2.vo.PageInfo;
 import svc.BoardListService;
-import vo.ActionForward;
-import vo.BoardBean;
-import vo.PageInfo;
 
 public class BoardListAction implements Action {
 
@@ -21,13 +22,13 @@ public class BoardListAction implements Action {
 		}
 		
 		BoardListService boardListService = new BoardListService();
-		int listCount=boardListService.getListCount(); //ì´ ë¦¬ìŠ¤íŠ¸ ìˆ˜ë¥¼ ë°›ì•„ì˜´.
-		articleList = boardListService.getArticleList(page,limit); //ë¦¬ìŠ¤íŠ¸ë¥¼ ë°›ì•„ì˜´.
-		//ì´ íŽ˜ì´ì§€ ìˆ˜.
-   		int maxPage=(int)((double)listCount/limit+0.95); //0.95ë¥¼ ë”í•´ì„œ ì˜¬ë¦¼ ì²˜ë¦¬.
-   		//í˜„ìž¬ íŽ˜ì´ì§€ì— ë³´ì—¬ì¤„ ì‹œìž‘ íŽ˜ì´ì§€ ìˆ˜(1, 11, 21 ë“±...)
+		int listCount=boardListService.getListCount(); //ì´? ë¦¬ì?¤í?? ??ë¥? ë°?????.
+		articleList = boardListService.getArticleList(page,limit); //ë¦¬ì?¤í?¸ë?? ë°?????.
+		//ì´? ???´ì? ??.
+   		int maxPage=(int)((double)listCount/limit+0.95); //0.95ë¥? ???´ì?? ?¬ë¦¼ ì²?ë¦?.
+   		//???? ???´ì??? ë³´ì?¬ì? ???? ???´ì? ??(1, 11, 21 ??...)
    		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
-   		//í˜„ìž¬ íŽ˜ì´ì§€ì— ë³´ì—¬ì¤„ ë§ˆì§€ë§‰ íŽ˜ì´ì§€ ìˆ˜.(10, 20, 30 ë“±...)
+   		//???? ???´ì??? ë³´ì?¬ì? ë§?ì§?ë§? ???´ì? ??.(10, 20, 30 ??...)
    	        int endPage = startPage+10-1;
 
    		if (endPage> maxPage) endPage= maxPage;

@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-encoding//WebContent/js/header.js=UTF-8
-encoding//src/action=UTF-8
-encoding//src/action/BoardWriteProAction.java=UTF-8
+encoding//WebContent/jsp_newlec/js/header.js=UTF-8
+encoding//src/mvc2/action=UTF-8
+encoding//src/mvc2/action/BoardWriteProAction.java=UTF-8

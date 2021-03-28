@@ -1,9 +1,11 @@
 package svc;
 
+import static mvc2.db.JdbcUtil.*;
+
 import java.sql.Connection;
-import dao.BoardDAO;
-import vo.BoardBean;
-import static db.JdbcUtil.*;
+
+import mvc2.dao.BoardDAO;
+import mvc2.vo.BoardBean;
 
 public class BoardDetailService {
 

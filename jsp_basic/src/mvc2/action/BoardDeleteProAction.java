@@ -1,10 +1,11 @@
-package action;
+package mvc2.action;
 
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mvc2.vo.ActionForward;
 import svc.BoardDeleteProService;
-import vo.ActionForward;
 
 public class BoardDeleteProAction implements Action {
 
@@ -22,7 +23,7 @@ public class BoardDeleteProAction implements Action {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('삭제할 권한이 없습니다');");
+			out.println("alert('?????? �????? ???��????');");
 			out.println("history.back();");
 			out.println("</script>");
 			out.close();
@@ -36,7 +37,7 @@ public class BoardDeleteProAction implements Action {
 				response.setContentType("text/html;charset=UTF-8");
 				PrintWriter out = response.getWriter();
 				out.println("<script>");
-				out.println("alert('삭제실패');");
+				out.println("alert('?????��??');");
 				out.println("history.back();");
 				out.println("</script>");
 				out.close();
