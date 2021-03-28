@@ -1,16 +1,17 @@
-package svc;
+package mvc2.svc;
 
-import static mvc2.db.JdbcUtil.*;
+import static mvc2.db.JdbcUtil.close;
+import static mvc2.db.JdbcUtil.commit;
+import static mvc2.db.JdbcUtil.getConnection;
+import static mvc2.db.JdbcUtil.rollback;
 
 import java.sql.Connection;
 
 import mvc2.dao.BoardDAO;
-import mvc2.vo.BoardBean;
 
-public class BoardModifyProService {
+public class BoardDeleteProService {
 
 	public boolean isArticleWriter(int board_num, String pass) throws Exception {
-		// TODO Auto-generated method stub
 		
 		boolean isArticleWriter = false;
 		Connection con = getConnection();
@@ -22,26 +23,24 @@ public class BoardModifyProService {
 		
 	}
 
-	public boolean modifyArticle(BoardBean article) throws Exception {
-		// TODO Auto-generated method stub
+	public boolean removeArticle(int board_num) throws Exception{
 		
-		boolean isModifySuccess = false;
+		boolean isRemoveSuccess = false;
 		Connection con = getConnection();
 		BoardDAO boardDAO = BoardDAO.getInstance();
 		boardDAO.setConnection(con);
-		int updateCount = boardDAO.updateArticle(article);
+		int deleteCount = boardDAO.deleteArticle(board_num);
 		
-		if(updateCount > 0){
+		if(deleteCount > 0){
 			commit(con);
-			isModifySuccess=true;
+			isRemoveSuccess=true;
 		}
 		else{
 			rollback(con);
 		}
 		
 		close(con);
-		return isModifySuccess;
-		
+		return isRemoveSuccess;
 	}
 
 }

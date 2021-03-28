@@ -4,9 +4,9 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mvc2.svc.BoardModifyProService;
 import mvc2.vo.ActionForward;
 import mvc2.vo.BoardBean;
-import svc.BoardModifyProService;
 
 public class BoardModifyProAction implements Action {
 

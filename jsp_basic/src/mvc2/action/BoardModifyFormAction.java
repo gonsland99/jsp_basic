@@ -3,9 +3,9 @@ package mvc2.action;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mvc2.svc.BoardDetailService;
 import mvc2.vo.ActionForward;
 import mvc2.vo.BoardBean;
-import svc.BoardDetailService;
 
 public class BoardModifyFormAction implements Action {
 	

@@ -1,4 +1,4 @@
-package svc;
+package mvc2.svc;
 
 import static mvc2.db.JdbcUtil.*;
 

@@ -4,11 +4,11 @@ import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import svc.BoardWriteProService;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import mvc2.svc.BoardWriteProService;
 import mvc2.vo.ActionForward;
 import mvc2.vo.BoardBean;
 

@@ -4,10 +4,10 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mvc2.svc.BoardListService;
 import mvc2.vo.ActionForward;
 import mvc2.vo.BoardBean;
 import mvc2.vo.PageInfo;
-import svc.BoardListService;
 
 public class BoardListAction implements Action {
 

@@ -4,8 +4,8 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mvc2.svc.BoardDeleteProService;
 import mvc2.vo.ActionForward;
-import svc.BoardDeleteProService;
 
 public class BoardDeleteProAction implements Action {
 
