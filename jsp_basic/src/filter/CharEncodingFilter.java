@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("/*")	//À¥ÇÊÅÍ: ÀÛ¾÷ Àü ¹®Á¦µÉ ¸¸ÇÑ »çÇ×À» ¹Ì¸® ½ÇÇà, ÇÊÅÍ¸µ ÇØÁÖ´Â ¿ªÇÒ
+@WebFilter("/filter")	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Û¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
 public class CharEncodingFilter implements Filter {
 
 	@Override
