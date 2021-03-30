@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
@@ -27,6 +28,9 @@
 				out.println("<script>");
 				out.println("location.href='main.jsp'");
 				out.println("</script>");
+			}else{
+				out.println("<script>alert('비밀번호가 일치하지 않습니다.'); location.href='loginForm.jsp';</script>");
+				out.flush();
 			}
 		}
 		out.println("<script>");
