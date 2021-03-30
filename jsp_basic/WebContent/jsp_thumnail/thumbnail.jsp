@@ -47,6 +47,6 @@
 -원본이미지-<br />
 <img src="image/<%=filename %>">
 -썸네일 이미지-<br />
-<img src="image/sm_<%=file %>">
+<img src="image/sm_<%=filename %>">
 </body>
 </html>
