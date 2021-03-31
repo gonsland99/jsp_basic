@@ -5,7 +5,7 @@
 <%@ page import="java.sql.*" %>
 <%
 	Connection con = null;
-	String sql = "insert into student (num,name) values(?,'hey')";
+	String sql = "insert into student (num,name) values(?,'ho')";
 	PreparedStatement pst = null;
 	//JNDI(Java Naming Directory Interface)
 	try{
@@ -14,7 +14,7 @@
 		con = ds.getConnection();
 		pst = con.prepareStatement(sql);
 		
-		for(int i=12; i<=15; i++){
+		for(int i=16; i<=17; i++){
 			pst.setInt(1, i);
 			if(pst.executeUpdate()!=0){
 				out.println("<h3>"+i+"번 레코드 등록!</h3>");
