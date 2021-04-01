@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//WebContent/jsp_fileUpload=UTF-8
 encoding//WebContent/jsp_newlec/js/header.js=UTF-8
+encoding//src/filter=UTF-8
+encoding//src/filter/CharEncodingFilter.java=UTF-8
 encoding//src/jsp_upload=UTF-8
 encoding//src/mvc2/action=UTF-8
 encoding//src/mvc2/action/BoardWriteProAction.java=UTF-8
+encoding/<project>=UTF-8
