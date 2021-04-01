@@ -22,8 +22,8 @@ public class BoardWriteProAction implements Action {
 		String saveFolder="/boardUpload";
 		int fileSize=5*1024*1024;
 		ServletContext context = request.getServletContext();
-//		realFolder=context.getRealPath(saveFolder); 
-		realFolder = "c:" + saveFolder;
+		realFolder = context.getRealPath(saveFolder); 
+	//	realFolder = "c:" + saveFolder;
 		MultipartRequest multi=new MultipartRequest(request,
 				realFolder,
 				fileSize,
@@ -51,7 +51,7 @@ public class BoardWriteProAction implements Action {
 		else{
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setPath("/boardList.do");
+			forward.setPath("boardList.do");
 		}
 
 		return forward;

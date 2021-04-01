@@ -1,8 +1,6 @@
 package mvc2.db;
 
 import java.sql.Connection;
-
-//import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -11,7 +9,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 public class JdbcUtil {
-	//Ä¿³ØÆ® Ç®
+	//Ä¿ï¿½ï¿½Æ® Ç®
 	public static Connection getConnection(){
 		Connection con=null;
 		
@@ -19,14 +17,15 @@ public class JdbcUtil {
 			Context init = new InitialContext();
 			DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/model2");
 			con = ds.getConnection();
-			con.setAutoCommit(false); //Ä¿³ØÆ® Ç® Æ®·£Àè¼Ç Àû¿ë
+			con.setAutoCommit(false); //Ä¿ï¿½ï¿½Æ® Ç® Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			System.out.println("connect success");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		return con;
 	}
-	//Ä¿³ØÆ® °´Ã¼ close	
+	//Ä¿ï¿½ï¿½Æ® ï¿½ï¿½Ã¼ close	
 	public static void close(Connection con){
 		
 		try {
@@ -36,7 +35,7 @@ public class JdbcUtil {
 		}
 		
 	}
-	//Statement°´Ã¼ close	
+	//Statementï¿½ï¿½Ã¼ close	
 	public static void close(Statement stmt){
 		
 		try {
@@ -56,7 +55,7 @@ public class JdbcUtil {
 //		}
 //		
 //	}
-	//ResultSet°´Ã¼ close
+	//ResultSetï¿½ï¿½Ã¼ close
 	public static void close(ResultSet rs){
 		
 		try {

@@ -1,6 +1,7 @@
 package mvc2.controller;
 
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,17 +34,21 @@ public class BoardFrontController extends HttpServlet {
 	
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String RequestURI=request.getRequestURI();
-		String contextPath=request.getContextPath();
-		String command=RequestURI.substring(contextPath.length());
-		ActionForward forward=null;
-		Action action=null;
+		String requestURI = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		String command = requestURI.substring(contextPath.length());
+		ActionForward forward = null;
+		Action action = null;
+		
+		System.out.println(requestURI);
+		System.out.println(contextPath);
+		System.out.println(command);
 		
 		if(command.equals("/boardWriteForm.do")){
 			forward=new ActionForward();
 			forward.setPath("/board/qna_board_write.jsp");
 		}else if(command.equals("/boardWritePro.do")){
-			action  = new BoardWriteProAction();
+			action = new BoardWriteProAction();
 			try {
 				forward=action.execute(request, response );
 			} catch (Exception e) {
