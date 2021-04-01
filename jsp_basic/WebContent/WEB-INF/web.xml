@@ -9,6 +9,7 @@
 <!-- 		<url-pattern>/hello</url-pattern> -->
 <!-- 	</servlet-mapping> -->
 
+
 <!-- 	<filter> -->
 <!-- 		<filter-name>characterEncodingFilter</filter-name> -->
 <!-- 		<filter-class>filter.CharEncodingFilter</filter-class> -->

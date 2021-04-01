@@ -12,7 +12,7 @@
 		maxActive = "500" maxIdle = "100" 
 	/>
 	<Resource 
-		name = "jdbc/tes" 
+		name = "jdbc/admin" 
 		auth = "Container" 
 		type = "javax.sql.DataSource"
 		username = "root" 
